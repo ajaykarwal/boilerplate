@@ -1,0 +1,670 @@
+/*
+---
+title: Creative Jar Rset
+---
+
+A more considered reset
+
+*/
+/* line 12, ../SASS/shared/_cj-reset.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 20, ../SASS/shared/_cj-reset.scss */
+html, body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 32, ../SASS/shared/_cj-reset.scss */
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+/* line 38, ../SASS/shared/_cj-reset.scss */
+u, ins {
+  text-decoration: none;
+}
+
+/* line 43, ../SASS/shared/_cj-reset.scss */
+ins {
+  border-bottom: 1px solid;
+}
+
+/* line 48, ../SASS/shared/_cj-reset.scss */
+img {
+  font-style: italic;
+}
+
+/* line 54, ../SASS/shared/_cj-reset.scss */
+label,
+input,
+textarea,
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+/* line 63, ../SASS/shared/_cj-reset.scss */
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none;
+}
+
+/*
+
+Settings
+========
+
+*/
+/*doc
+---
+title: Grid
+name: Grid
+category: Settings
+---
+
+```html_example
+
+```
+
+*/
+/*
+---
+title: Clearfix
+---
+
+Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+
+Extend the clearfix class with Sass to avoid the `.cf` class appearing over and over in your markup.
+
+*/
+/* line 13, ../SASS/shared/_clearfix.scss */
+.cf:after, .media:after, .nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*doc
+---
+title: Media object
+name: Media object
+category: Shared
+---
+
+Place any image- and text-like content side-by-side, as per:
+stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+   
+
+```html_example
+
+<div class=media>
+   <img src=http://placekitten.com/200/300 alt="" class=media__img>
+   <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+
+```
+
+*/
+/* line 24, ../SASS/shared/_media.scss */
+.media {
+  display: block;
+}
+
+/* line 29, ../SASS/shared/_media.scss */
+.media__img {
+  float: left;
+  margin-right: 30px;
+}
+
+/* line 35, ../SASS/shared/_media.scss */
+.media__img--rev {
+  float: right;
+  margin-left: 30px;
+}
+
+/* line 40, ../SASS/shared/_media.scss */
+.media__img img,
+.media__img--rev img {
+  display: block;
+}
+
+/* line 45, ../SASS/shared/_media.scss */
+.media__body {
+  overflow: hidden;
+}
+
+/* line 49, ../SASS/shared/_media.scss */
+.media__body,
+.media__body > :last-child {
+  margin-bottom: 0;
+}
+
+/*doc
+---
+title: Nav object
+name: Nav object
+category: Base
+---
+
+Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
+When used on an `ol` or `ul`, this class throws the list into horizontal mode
+
+```html_example
+<ul class="nav">
+  <li><a href=#>Home</a></li>
+  <li><a href=#>About</a></li>
+  <li><a href=#>Portfolio</a></li>
+  <li><a href=#>Contact</a></li>
+</ul>
+```
+
+*/
+/* line 22, ../SASS/shared/_nav.scss */
+.nav {
+  list-style: none;
+  margin-left: 0;
+}
+/* line 29, ../SASS/shared/_nav.scss */
+.nav > li,
+.nav > li > a {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+/* line 36, ../SASS/shared/_nav.scss */
+.nav > li:before {
+  content: "";
+}
+
+/*doc
+---
+title: Nav object - Stacked
+name: Nav object - Stacked
+category: Base
+---
+
+`.nav--stacked` extends `.nav` and throws the list into vertical mode.
+
+```html_example
+<ul class="nav  nav--stacked">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+```
+*/
+/* line 65, ../SASS/shared/_nav.scss */
+.nav--stacked > li {
+  display: list-item;
+}
+/* line 68, ../SASS/shared/_nav.scss */
+.nav--stacked > li > a {
+  display: block;
+}
+
+/*doc
+---
+title: Nav object - Stacked
+name: Nav object - Stacked
+category: Base
+---
+
+`.nav--banner` extends `.nav` and centres the list, e.g.:
+
+```html_example
+<ul class="nav  nav--banner">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+```
+*/
+/* line 93, ../SASS/shared/_nav.scss */
+.nav--banner {
+  text-align: center;
+}
+
+/*doc
+---
+title: Nav object - Stacked
+name: Nav object - Stacked
+category: Base
+---
+
+Extends `.nav`. Give nav links a big, blocky hit area.
+
+```html_example
+<ul class="nav  nav--block">
+       <li><a href=#>Home</a></li>
+       <li><a href=#>About</a></li>
+       <li><a href=#>Portfolio</a></li>
+       <li><a href=#>Contact</a></li>
+   </ul>
+```
+*/
+/* line 116, ../SASS/shared/_nav.scss */
+.nav--block {
+  line-height: 1;
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+  white-space: nowrap;
+}
+/* line 124, ../SASS/shared/_nav.scss */
+.nav--block > li {
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+/* line 128, ../SASS/shared/_nav.scss */
+.nav--block > li > a {
+  padding: 15px;
+}
+
+/*doc
+---
+title: Nav object - Stacked
+name: Nav object - Stacked
+category: Base
+---
+
+Extend '.nav'. Force a nav to occupy 100% of the available width of its parent.
+
+```html_example
+<ul class="nav  nav--fit">
+    <li><a href=#>Home</a></li>
+    <li><a href=#>About</a></li>
+    <li><a href=#>Portfolio</a></li>
+    <li><a href=#>Contact</a></li>
+</ul>
+```
+*/
+/* line 153, ../SASS/shared/_nav.scss */
+.nav--fit {
+  display: table;
+  width: 100%;
+}
+/* line 157, ../SASS/shared/_nav.scss */
+.nav--fit > li {
+  display: table-cell;
+}
+/* line 160, ../SASS/shared/_nav.scss */
+.nav--fit > li > a {
+  display: block;
+}
+
+/*doc
+---
+title: Colour palette
+name: Colour palette
+category: Base
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example
+<ul class="nav nav--horizontal">
+	<li>
+		<div class="color-block" style="background: rgb(39,39,39);"></div>
+		<p>color: palette(brand, base)</p>
+	</li>
+
+	<li>
+		<div class="color-block" style="background: rgb(255, 48, 1);"></div>
+		<p>color: palette(brand, accent)</p>
+	</li>
+
+</ul>
+```
+
+*/
+/*
+---
+title: Main
+---
+
+*/
+/*doc
+---
+title: Code
+name: Code
+category: Base
+---
+
+```html_example
+
+```
+
+*/
+/* line 1, ../SASS/base/_forms.scss */
+fieldset {
+  padding: 30px;
+}
+
+/* line 7, ../SASS/base/_forms.scss */
+.form-fields dd {
+  margin-bottom: 15px;
+}
+
+/*doc
+---
+title: Labels
+name: Labels
+category: Forms
+---
+
+Define a `.label` class as well as a `label` element. This means we can apply label-like styling to meta-labels for groups of options where a `label` element is not suitable.
+
+```html_example
+
+<dl class="form-fields">
+
+    <dt><label>Label</label></dt>
+    <dd><input type="text" placeholder="Form field"></dd>
+
+    <dt><span class="label">Span styled as a label</span></dt>
+    <dd><input type="text" placeholder="Form field"></dd>
+
+</dl>
+
+```
+
+*/
+/* line 36, ../SASS/base/_forms.scss */
+label,
+.label {
+  font-weight: bold;
+}
+
+/*doc
+---
+title: Text Fields
+name: Text Fields
+category: Forms
+---
+
+```html_example
+
+<dl class="form-fields">
+
+    <dt>Text input</dt>
+    <dd><input type="text"></dd>
+
+    <dt>Email input</dt>
+    <dd><input type="email"></dd>
+
+    <dt>URL input</dt>
+    <dd><input type="url" placeholder="http://"></dd>
+
+    <dt>Password input</dt>
+    <dd><input type="password" value="password"></dd>
+
+</dl>
+
+```
+
+*/
+/* line 70, ../SASS/base/_forms.scss */
+input[type=text],
+input[type=search],
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=tel],
+textarea,
+.text-input {
+  border: solid 1px #7a7a7a;
+  color: #272727;
+}
+
+/*doc
+---
+title: Select fields
+name: Select fields
+category: Forms
+---
+
+```html_example
+
+<dl class="form-fields">
+
+    <dt>Select field</dt>
+    <dd>
+        <select>
+            <option>Option 01</option>
+            <option>Option 02</option>
+        </select>
+    </dd>
+
+</dl>
+
+```
+
+*/
+/*doc
+---
+title: Check lists
+name: Check lists
+category: Forms
+---
+
+Groups of checkboxes and radios
+
+```html_example
+
+<dl class="form-fields">
+
+    <dt><span class="label">How often would you like to be contacted?</span></dt>
+    <dd>
+        <ul class="check-list">
+            <li>
+                <input id="by-email" type="checkbox"> <label for="by-email">By email</label>
+            </li>
+            <li>
+                <input id="by-post" type="checkbox"> <label for="by-post">By post</label>
+            </li>
+            <li>
+                <input id="by-pigeon" type="checkbox"> <label for="by-pigeon">By carrier pigeon</label>
+            </li>
+        </ul>
+    </dd>
+
+    <dt><span class="label">How often would you like to be contacted?</span></dt>
+    <dd>
+        <ul class="check-list  multi-list  two-cols">
+            <li>
+                <input name="frequency" id="weekly" type="radio"> <label for="weekly">Weekly</label>
+            </li>
+            <li>
+                <input name="frequency" id="daily" type="radio"> <label for="daily">Daily</label>
+            </li>
+        </ul>
+    </dd>
+
+</dl>
+
+```
+
+*/
+/* line 155, ../SASS/base/_forms.scss */
+.check-list {
+  list-style: none;
+  margin: 0;
+}
+/* line 159, ../SASS/base/_forms.scss */
+.check-list label {
+  font-weight: normal;
+}
+
+/* line 169, ../SASS/base/_forms.scss */
+[placeholder] {
+  -moz-transition-property: opacity;
+  -o-transition-property: opacity;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -moz-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  -webkit-transition-delay: 0.5s;
+  transition-delay: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: ease-in;
+  -o-transition-timing-function: ease-in;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  font-style: italic;
+  opacity: 1;
+}
+
+/* line 178, ../SASS/base/_forms.scss */
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+/* line 182, ../SASS/base/_forms.scss */
+input:focus::-moz-placeholder {
+  opacity: 0;
+}
+
+/* line 186, ../SASS/base/_forms.scss */
+input:-moz-placeholder {
+  opacity: 0;
+}
+
+/*doc
+---
+title: Images
+name: Images
+category: Base
+---
+
+```html_example
+
+```
+
+*/
+/*doc
+---
+title: Unordered List
+name: Unordered List
+category: Base
+---
+
+```html_example
+
+<ul>
+	<li>A list item</li>
+	<li>Another item in a list</li>
+	<li>Yet another item in this list of items</li>
+</ul>
+
+```
+
+*/
+/*doc
+---
+title: Ordered List
+name: Ordered List
+category: Base
+---
+
+```html_example
+
+<ol>
+	<li>First list item</li>
+	<li>Second item in a list of ordered items</li>
+	<li>Third item in the list</li>
+</ol>
+
+```
+
+*/
+/*doc
+---
+title: Quotes
+name: Quotes
+category: Base
+---
+
+```html_example
+
+<blockquote>
+	<p>This text is quoted. A block of quoted text like this is particularly useful when presented as a pull-quote within an article of text.</p>
+</blockquote>
+
+```
+
+*/
+/*doc
+---
+title: Tables
+name: Tables
+category: Base
+---
+
+```html_example
+
+```
+
+*/
+/*doc
+---
+title: Paragraphs
+name: Paragraphs
+category: Base
+---
+
+```html_example
+
+<p>This is a paragraph of text. Some of the text may be <em>emphasised</em> and some it might even be <strong>strongly emphasised</strong>. Occasionally <q>quoted text</q> may be found within a paragraph &hellip;and of course <a href="#">a link</a> may appear at any point in the text. The average paragraph contains five or six sentences although some may contain as little or one or two while others carry on for anything up to ten sentences and beyond.</p>
+
+```
+
+*/
+/*doc
+---
+title: Pagination
+name: Pagination
+category: Components
+---
+
+```html_example
+
+<ol class="pagination">
+	<li><a>1</a></li>
+	<li><a href="#">2</a></li>
+	<li><a href="#">3</a></li>
+	<li><a href="#">4</a></li>
+	<li><a href="#">5</a></li>
+	<li><a href="#">6</a></li>
+	<li><a href="#">7</a></li>
+	<li><a href="#">8</a></li>
+	<li><a href="#">9</a></li>
+	<li><a href="#">10</a></li>
+</ol>
+
+```
+
+*/
+
+/*# sourceMappingURL=default.css.map */

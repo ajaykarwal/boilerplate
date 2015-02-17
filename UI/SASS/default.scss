@@ -1,0 +1,34 @@
+@import "compass";
+
+// Reset
+@import "shared/cj-reset";
+
+// Settings
+@import "shared/settings";
+
+// Shared including re-useable objects and classes.
+@import "shared/clearfix";
+@import "shared/media";  // Media object
+@import "shared/nav";  // Nav object
+
+// Base styles
+@import "base/colour-palette"; // Leave this first as the colour palette function is included.
+@import "base/main";
+@import "base/code";
+@import "base/forms";
+@import "base/images";
+@import "base/lists";
+//@import "base/paragraphs";
+@import "base/quotes";
+//@import "base/smallprint";
+@import "base/tables";
+@import "base/typography";
+
+// Components
+@import "components/pagination";
+
+// Regions
+@import "regions/header";
+@import "regions/footer";
+
+// Vendor

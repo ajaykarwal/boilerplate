@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Creative Jar style guide Forms</title>
+    <!-- Project styles -->
+    <link rel="stylesheet" href="../CSS/default.css">
+    <!-- Style guide specific styles -->
+    <link rel="stylesheet" href="Assets/CSS/styleguide.css">
+  </head>
+  <body>
+
+  
+    <div class="container">
+
+    <header class="media styleguide-header">
+      <img src="Assets/Images/creative-jar-logo.png" alt="Creative Jar" class="media__img" />
+      <div class="media__body">
+        <h1>Creative Jar Style Guide</h1>
+      </div>
+    </header>
+
+    <div>
+
+      <nav>
+        <ul class="nav nav--fit primary-nav">
+        
+          <li><a href="forms.html">Forms</a></li>
+        
+          <li><a href="base.html">Base</a></li>
+        
+          <li><a href="settings.html">Settings</a></li>
+        
+          <li><a href="shared.html">Shared</a></li>
+        
+          <li><a href="components.html">Components</a></li>
+        
+        </ul>
+      </nav>
+      
+      <section class="content">
+
+        <aside class="col-a">
+          <h1></h1>
+          <ul class="nav nav--stacked secondary-nav">
+          
+            <li><a href="#Check lists">Check lists</a></li>
+          
+            <li><a href="#Labels">Labels</a></li>
+          
+            <li><a href="#Select fields">Select fields</a></li>
+          
+            <li><a href="#Text Fields">Text Fields</a></li>
+          
+          </ul>
+        </aside>
+
+        <div class="col-b">
+<h1 id="Check lists">Check lists</h1>
+
+<p>Groups of checkboxes and radios</p>
+<div class="codeExample"><div class="exampleOutput">
+<dl class="form-fields">
+
+    <dt><span class="label">How often would you like to be contacted?</span></dt>
+    <dd>
+        <ul class="check-list">
+            <li>
+                <input id="by-email" type="checkbox"> <label for="by-email">By email</label>
+            </li>
+            <li>
+                <input id="by-post" type="checkbox"> <label for="by-post">By post</label>
+            </li>
+            <li>
+                <input id="by-pigeon" type="checkbox"> <label for="by-pigeon">By carrier pigeon</label>
+            </li>
+        </ul>
+    </dd>
+
+    <dt><span class="label">How often would you like to be contacted?</span></dt>
+    <dd>
+        <ul class="check-list  multi-list  two-cols">
+            <li>
+                <input name="frequency" id="weekly" type="radio"> <label for="weekly">Weekly</label>
+            </li>
+            <li>
+                <input name="frequency" id="daily" type="radio"> <label for="daily">Daily</label>
+            </li>
+        </ul>
+    </dd>
+
+</dl>
+
+</div><div class="codeBlock"><div class="highlight"><pre>
+<span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"form-fields"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;dt&gt;&lt;span</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>How often would you like to be contacted?<span class="nt">&lt;/span&gt;&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"check-list"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"by-email"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"by-email"</span><span class="nt">&gt;</span>By email<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"by-post"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"by-post"</span><span class="nt">&gt;</span>By post<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"by-pigeon"</span> <span class="na">type=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"by-pigeon"</span><span class="nt">&gt;</span>By carrier pigeon<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/dd&gt;</span>
+
+    <span class="nt">&lt;dt&gt;&lt;span</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>How often would you like to be contacted?<span class="nt">&lt;/span&gt;&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"check-list  multi-list  two-cols"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"frequency"</span> <span class="na">id=</span><span class="s">"weekly"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"weekly"</span><span class="nt">&gt;</span>Weekly<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"frequency"</span> <span class="na">id=</span><span class="s">"daily"</span> <span class="na">type=</span><span class="s">"radio"</span><span class="nt">&gt;</span> <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"daily"</span><span class="nt">&gt;</span>Daily<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/dd&gt;</span>
+
+<span class="nt">&lt;/dl&gt;</span>
+
+</pre></div></div></div>
+<h1 id="Labels">Labels</h1>
+
+<p>Define a <code>.label</code> class as well as a <code>label</code> element. This means we can apply label-like styling to meta-labels for groups of options where a <code>label</code> element is not suitable.</p>
+<div class="codeExample"><div class="exampleOutput">
+<dl class="form-fields">
+
+    <dt><label>Label</label></dt>
+    <dd><input type="text" placeholder="Form field"></dd>
+
+    <dt><span class="label">Span styled as a label</span></dt>
+    <dd><input type="text" placeholder="Form field"></dd>
+
+</dl>
+
+</div><div class="codeBlock"><div class="highlight"><pre>
+<span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"form-fields"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;dt&gt;&lt;label&gt;</span>Label<span class="nt">&lt;/label&gt;&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Form field"</span><span class="nt">&gt;&lt;/dd&gt;</span>
+
+    <span class="nt">&lt;dt&gt;&lt;span</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>Span styled as a label<span class="nt">&lt;/span&gt;&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Form field"</span><span class="nt">&gt;&lt;/dd&gt;</span>
+
+<span class="nt">&lt;/dl&gt;</span>
+
+</pre></div></div></div>
+<h1 id="Select fields">Select fields</h1>
+<div class="codeExample"><div class="exampleOutput">
+<dl class="form-fields">
+
+    <dt>Select field</dt>
+    <dd>
+        <select>
+            <option>Option 01</option>
+            <option>Option 02</option>
+        </select>
+    </dd>
+
+</dl>
+
+</div><div class="codeBlock"><div class="highlight"><pre>
+<span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"form-fields"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;dt&gt;</span>Select field<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>
+        <span class="nt">&lt;select&gt;</span>
+            <span class="nt">&lt;option&gt;</span>Option 01<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option&gt;</span>Option 02<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/dd&gt;</span>
+
+<span class="nt">&lt;/dl&gt;</span>
+
+</pre></div></div></div>
+<h1 id="Text Fields">Text Fields</h1>
+<div class="codeExample"><div class="exampleOutput">
+<dl class="form-fields">
+
+    <dt>Text input</dt>
+    <dd><input type="text"></dd>
+
+    <dt>Email input</dt>
+    <dd><input type="email"></dd>
+
+    <dt>URL input</dt>
+    <dd><input type="url" placeholder="http://"></dd>
+
+    <dt>Password input</dt>
+    <dd><input type="password" value="password"></dd>
+
+</dl>
+
+</div><div class="codeBlock"><div class="highlight"><pre>
+<span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"form-fields"</span><span class="nt">&gt;</span>
+
+    <span class="nt">&lt;dt&gt;</span>Text input<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;&lt;input</span> <span class="na">type=</span><span class="s">"text"</span><span class="nt">&gt;&lt;/dd&gt;</span>
+
+    <span class="nt">&lt;dt&gt;</span>Email input<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;&lt;input</span> <span class="na">type=</span><span class="s">"email"</span><span class="nt">&gt;&lt;/dd&gt;</span>
+
+    <span class="nt">&lt;dt&gt;</span>URL input<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;&lt;input</span> <span class="na">type=</span><span class="s">"url"</span> <span class="na">placeholder=</span><span class="s">"http://"</span><span class="nt">&gt;&lt;/dd&gt;</span>
+
+    <span class="nt">&lt;dt&gt;</span>Password input<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">value=</span><span class="s">"password"</span><span class="nt">&gt;&lt;/dd&gt;</span>
+
+<span class="nt">&lt;/dl&gt;</span>
+
+</pre></div></div></div>      
+		</div>
+      </section>
+      <footer>
+        <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
+      </footer>
+    </div>
+
+    </div>
+    <!-- / .container -->
+    
+  </body>
+</html>

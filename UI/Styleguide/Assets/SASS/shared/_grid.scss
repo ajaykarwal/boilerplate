@@ -1,0 +1,19 @@
+// ----------------------------------------
+// Grid settings
+// ----------------------------------------
+
+$susy: (
+  columns: 12,
+  gutters: 72px/30px,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);
+
+// ----------------------------------------
+// Set grid ontainer
+// ----------------------------------------
+.container {
+    @include container;
+    max-width: 1194px;
+}

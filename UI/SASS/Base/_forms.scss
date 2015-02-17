@@ -1,0 +1,188 @@
+fieldset{
+    padding:$base-spacing-unit;
+}
+
+.form-fields{
+
+    dd { margin-bottom: $half-spacing-unit; }
+
+}
+
+/*doc
+---
+title: Labels
+name: Labels
+category: Forms
+---
+
+Define a `.label` class as well as a `label` element. This means we can apply label-like styling to meta-labels for groups of options where a `label` element is not suitable.
+
+```html_example
+
+<dl class="form-fields">
+
+    <dt><label>Label</label></dt>
+    <dd><input type="text" placeholder="Form field"></dd>
+
+    <dt><span class="label">Span styled as a label</span></dt>
+    <dd><input type="text" placeholder="Form field"></dd>
+
+</dl>
+
+```
+
+*/ 
+
+label,
+.label{
+    font-weight: bold;
+}
+
+/*doc
+---
+title: Text Fields
+name: Text Fields
+category: Forms
+---
+
+```html_example
+
+<dl class="form-fields">
+
+    <dt>Text input</dt>
+    <dd><input type="text"></dd>
+
+    <dt>Email input</dt>
+    <dd><input type="email"></dd>
+
+    <dt>URL input</dt>
+    <dd><input type="url" placeholder="http://"></dd>
+
+    <dt>Password input</dt>
+    <dd><input type="password" value="password"></dd>
+
+</dl>
+
+```
+
+*/
+
+input[type=text], 
+input[type=search], 
+input[type=email], 
+input[type=url], 
+input[type=password], 
+input[type=tel],
+textarea,
+.text-input {
+    border: solid 1px palette(neutral, base);
+    color: palette(brand);
+}
+
+
+/*doc
+---
+title: Select fields
+name: Select fields
+category: Forms
+---
+
+```html_example
+
+<dl class="form-fields">
+
+    <dt>Select field</dt>
+    <dd>
+        <select>
+            <option>Option 01</option>
+            <option>Option 02</option>
+        </select>
+    </dd>
+
+</dl>
+
+```
+
+*/ 
+
+
+/*doc
+---
+title: Check lists
+name: Check lists
+category: Forms
+---
+
+Groups of checkboxes and radios
+
+```html_example
+
+<dl class="form-fields">
+
+    <dt><span class="label">How often would you like to be contacted?</span></dt>
+    <dd>
+        <ul class="check-list">
+            <li>
+                <input id="by-email" type="checkbox"> <label for="by-email">By email</label>
+            </li>
+            <li>
+                <input id="by-post" type="checkbox"> <label for="by-post">By post</label>
+            </li>
+            <li>
+                <input id="by-pigeon" type="checkbox"> <label for="by-pigeon">By carrier pigeon</label>
+            </li>
+        </ul>
+    </dd>
+
+    <dt><span class="label">How often would you like to be contacted?</span></dt>
+    <dd>
+        <ul class="check-list  multi-list  two-cols">
+            <li>
+                <input name="frequency" id="weekly" type="radio"> <label for="weekly">Weekly</label>
+            </li>
+            <li>
+                <input name="frequency" id="daily" type="radio"> <label for="daily">Daily</label>
+            </li>
+        </ul>
+    </dd>
+
+</dl>
+
+```
+
+*/ 
+
+.check-list{
+    list-style:none;
+    margin:0;
+
+    label {
+        font-weight: normal;
+    }
+
+}
+
+// -----------------------------------------------------------------------------
+// Placeholders
+// -----------------------------------------------------------------------------
+
+[placeholder] {
+    @include transition-property(opacity);
+    @include transition-delay(0.5s);
+    @include transition-duration(0.5s);
+    @include transition-timing-function(ease-in);
+    font-style: italic;
+    opacity: 1;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+input:focus::-moz-placeholder{
+  opacity: 0;
+}
+
+input:-moz-placeholder{
+  opacity: 0;
+}

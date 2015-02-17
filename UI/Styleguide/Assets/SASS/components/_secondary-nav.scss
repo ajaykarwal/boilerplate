@@ -1,0 +1,18 @@
+// ----------------------------------------
+// Secondary Nav
+// ----------------------------------------
+
+.secondary-nav {
+
+	margin-bottom: $base-spacing-unit;
+
+	li {
+		border-bottom: solid 1px $brand-grey-light;
+		padding: $half-spacing-unit;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+}

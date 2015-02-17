@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Creative Jar style guide Base</title>
+    <!-- Project styles -->
+    <link rel="stylesheet" href="../CSS/default.css">
+    <!-- Style guide specific styles -->
+    <link rel="stylesheet" href="Assets/CSS/styleguide.css">
+  </head>
+  <body>
+
+  
+    <div class="container">
+
+    <header class="media styleguide-header">
+      <img src="Assets/Images/creative-jar-logo.png" alt="Creative Jar" class="media__img" />
+      <div class="media__body">
+        <h1>Creative Jar Style Guide</h1>
+      </div>
+    </header>
+
+    <div>
+
+      <nav>
+        <ul class="nav nav--fit primary-nav">
+        
+          <li><a href="forms.html">Forms</a></li>
+        
+          <li><a href="base.html">Base</a></li>
+        
+          <li><a href="settings.html">Settings</a></li>
+        
+          <li><a href="shared.html">Shared</a></li>
+        
+          <li><a href="components.html">Components</a></li>
+        
+        </ul>
+      </nav>
+      
+      <section class="content">
+
+        <aside class="col-a">
+          <h1></h1>
+          <ul class="nav nav--stacked secondary-nav">
+          
+            <li><a href="#Code">Code</a></li>
+          
+            <li><a href="#Colour palette">Colour palette</a></li>
+          
+            <li><a href="#Images">Images</a></li>
+          
+            <li><a href="#Nav object">Nav object</a></li>
+          
+            <li><a href="#Nav object - Stacked">Nav object - Stacked</a></li>
+          
+            <li><a href="#Ordered List">Ordered List</a></li>
+          
+            <li><a href="#Paragraphs">Paragraphs</a></li>
+          
+            <li><a href="#Quotes">Quotes</a></li>
+          
+            <li><a href="#Standard headings">Standard headings</a></li>
+          
+            <li><a href="#Tables">Tables</a></li>
+          
+            <li><a href="#Unordered List">Unordered List</a></li>
+          
+          </ul>
+        </aside>
+
+        <div class="col-b">
+<h1 id="Code">Code</h1>
+<div class="codeExample"><div class="exampleOutput">
+</div><div class="codeBlock"><div class="highlight"><pre>
+</pre></div></div></div>
+<h1 id="Colour palette">Colour palette</h1>
+
+<p>Button styles can be applied to any element. Typically you&#39;ll want to
+use either a <code>&lt;button&gt;</code> or an <code>&lt;a&gt;</code> element:</p>
+<div class="codeExample"><div class="exampleOutput"><ul class="nav nav--horizontal">
+    <li>
+        <div class="color-block" style="background: rgb(39,39,39);"></div>
+        <p>color: palette(brand, base)</p>
+    </li>
+
+    <li>
+        <div class="color-block" style="background: rgb(255, 48, 1);"></div>
+        <p>color: palette(brand, accent)</p>
+    </li>
+
+</ul>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav--horizontal"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"color-block"</span> <span class="na">style=</span><span class="s">"background: rgb(39,39,39);"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;p&gt;</span>color: palette(brand, base)<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"color-block"</span> <span class="na">style=</span><span class="s">"background: rgb(255, 48, 1);"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;p&gt;</span>color: palette(brand, accent)<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div></div></div>
+<h1 id="Images">Images</h1>
+<div class="codeExample"><div class="exampleOutput">
+</div><div class="codeBlock"><div class="highlight"><pre>
+</pre></div></div></div>
+<h1 id="Nav object">Nav object</h1>
+
+<p>Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
+When used on an <code>ol</code> or <code>ul</code>, this class throws the list into horizontal mode</p>
+<div class="codeExample"><div class="exampleOutput"><ul class="nav">
+  <li><a href=#>Home</a></li>
+  <li><a href=#>About</a></li>
+  <li><a href=#>Portfolio</a></li>
+  <li><a href=#>Contact</a></li>
+</ul>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">#</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">#</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">#</span><span class="nt">&gt;</span>Portfolio<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">#</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div></div></div>
+<h1 id="Nav object - Stacked">Nav object - Stacked</h1>
+
+<p>Extend &#39;.nav&#39;. Force a nav to occupy 100% of the available width of its parent.</p>
+<div class="codeExample"><div class="exampleOutput"><ul class="nav  nav--fit">
+    <li><a href=#>Home</a></li>
+    <li><a href=#>About</a></li>
+    <li><a href=#>Portfolio</a></li>
+    <li><a href=#>Contact</a></li>
+</ul>
+</div><div class="codeBlock"><div class="highlight"><pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav  nav--fit"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">#</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">#</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">#</span><span class="nt">&gt;</span>Portfolio<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">#</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div></div></div>
+<h1 id="Ordered List">Ordered List</h1>
+<div class="codeExample"><div class="exampleOutput">
+<ol>
+    <li>First list item</li>
+    <li>Second item in a list of ordered items</li>
+    <li>Third item in the list</li>
+</ol>
+
+</div><div class="codeBlock"><div class="highlight"><pre>
+<span class="nt">&lt;ol&gt;</span>
+    <span class="nt">&lt;li&gt;</span>First list item<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Second item in a list of ordered items<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Third item in the list<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span>
+
+</pre></div></div></div>
+<h1 id="Paragraphs">Paragraphs</h1>
+<div class="codeExample"><div class="exampleOutput">
+<p>This is a paragraph of text. Some of the text may be <em>emphasised</em> and some it might even be <strong>strongly emphasised</strong>. Occasionally <q>quoted text</q> may be found within a paragraph &hellip;and of course <a href="#">a link</a> may appear at any point in the text. The average paragraph contains five or six sentences although some may contain as little or one or two while others carry on for anything up to ten sentences and beyond.</p>
+
+</div><div class="codeBlock"><div class="highlight"><pre>
+<span class="nt">&lt;p&gt;</span>This is a paragraph of text. Some of the text may be <span class="nt">&lt;em&gt;</span>emphasised<span class="nt">&lt;/em&gt;</span> and some it might even be <span class="nt">&lt;strong&gt;</span>strongly emphasised<span class="nt">&lt;/strong&gt;</span>. Occasionally <span class="nt">&lt;q&gt;</span>quoted text<span class="nt">&lt;/q&gt;</span> may be found within a paragraph <span class="ni">&amp;hellip;</span>and of course <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>a link<span class="nt">&lt;/a&gt;</span> may appear at any point in the text. The average paragraph contains five or six sentences although some may contain as little or one or two while others carry on for anything up to ten sentences and beyond.<span class="nt">&lt;/p&gt;</span>
+
+</pre></div></div></div>
+<h1 id="Quotes">Quotes</h1>
+<div class="codeExample"><div class="exampleOutput">
+<blockquote>
+    <p>This text is quoted. A block of quoted text like this is particularly useful when presented as a pull-quote within an article of text.</p>
+</blockquote>
+
+</div><div class="codeBlock"><div class="highlight"><pre>
+<span class="nt">&lt;blockquote&gt;</span>
+    <span class="nt">&lt;p&gt;</span>This text is quoted. A block of quoted text like this is particularly useful when presented as a pull-quote within an article of text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span>
+
+</pre></div></div></div>
+<h1 id="Standard headings">Standard headings</h1>
+<div class="codeExample"><div class="exampleOutput">
+<h1>Level one heading</h1>
+
+<h2>Level two heading</h2>
+
+<h3>Level three heading</h3>
+
+<h4>Level four heading</h4>
+
+<h5>Level five heading</h5>
+
+</div><div class="codeBlock"><div class="highlight"><pre>
+<span class="nt">&lt;h1&gt;</span>Level one heading<span class="nt">&lt;/h1&gt;</span>
+
+<span class="nt">&lt;h2&gt;</span>Level two heading<span class="nt">&lt;/h2&gt;</span>
+
+<span class="nt">&lt;h3&gt;</span>Level three heading<span class="nt">&lt;/h3&gt;</span>
+
+<span class="nt">&lt;h4&gt;</span>Level four heading<span class="nt">&lt;/h4&gt;</span>
+
+<span class="nt">&lt;h5&gt;</span>Level five heading<span class="nt">&lt;/h5&gt;</span>
+
+</pre></div></div></div>
+<h1 id="Tables">Tables</h1>
+<div class="codeExample"><div class="exampleOutput">
+</div><div class="codeBlock"><div class="highlight"><pre>
+</pre></div></div></div>
+<h1 id="Unordered List">Unordered List</h1>
+<div class="codeExample"><div class="exampleOutput">
+<ul>
+    <li>A list item</li>
+    <li>Another item in a list</li>
+    <li>Yet another item in this list of items</li>
+</ul>
+
+</div><div class="codeBlock"><div class="highlight"><pre>
+<span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>A list item<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Another item in a list<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Yet another item in this list of items<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+
+</pre></div></div></div>      
+		</div>
+      </section>
+      <footer>
+        <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
+      </footer>
+    </div>
+
+    </div>
+    <!-- / .container -->
+    
+  </body>
+</html>

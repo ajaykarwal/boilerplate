@@ -1,0 +1,58 @@
+/*doc
+---
+title: Colour palette
+name: Colour palette
+category: Base
+---
+
+Button styles can be applied to any element. Typically you'll want to
+use either a `<button>` or an `<a>` element:
+
+```html_example
+<ul class="nav nav--horizontal">
+	<li>
+		<div class="color-block" style="background: rgb(39,39,39);"></div>
+		<p>color: palette(brand, base)</p>
+	</li>
+
+	<li>
+		<div class="color-block" style="background: rgb(255, 48, 1);"></div>
+		<p>color: palette(brand, accent)</p>
+	</li>
+
+</ul>
+```
+
+*/
+
+// -----------------------------------------------------------------------------
+// Color Palette
+// -----------------------------------------------------------------------------
+
+$color-neutral-base: rgb(122,122,122);
+
+// -----------------------------------------------------------------------------
+// Color Palette Map
+// -----------------------------------------------------------------------------
+
+$palettes: (
+	// Set the brand colors
+    brand: (
+        base:   	rgb(39,39,39), // CJ Dark grey
+        accent:  	rgb(255, 48, 1), //CJ orange
+    ),
+
+    neutral: (
+        base:  		$color-neutral-base,
+        light: 		lighten($color-neutral-base, 20%),
+        dark: 		darken($color-neutral-base, 20%)
+    )
+);
+
+// -----------------------------------------------------------------------------
+// Palette SASS Function
+// -----------------------------------------------------------------------------
+
+@function palette($palette, $tone: 'base') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}

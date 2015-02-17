@@ -1,0 +1,15 @@
+// ----------------------------------------
+// Primary Nav
+// ----------------------------------------
+
+.primary-nav {
+
+	background-color: $brand-grey-dark;
+	padding: $half-spacing-unit $base-spacing-unit;
+	margin-bottom: $base-spacing-unit;
+
+	a { 
+		color: white;
+	}
+
+}
