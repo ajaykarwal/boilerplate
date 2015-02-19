@@ -6,6 +6,10 @@
 // Settings
 @import "shared/settings";
 
+// Mixins
+@import "shared/mi-icons";
+@import "shared/mi-palette";
+
 // Shared including re-useable objects and classes.
 @import "shared/clearfix";
 @import "shared/media";  // Media object
