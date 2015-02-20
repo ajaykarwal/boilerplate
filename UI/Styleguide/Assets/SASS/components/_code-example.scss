@@ -5,7 +5,7 @@
 .codeExample{
 	margin-top: $base-spacing-unit;
 	margin-bottom: $base-spacing-unit;
-	border-bottom: solid 5px $brand-grey-dark;
+	//border-bottom: solid 5px $brand-grey-dark;
 }
 
 // ----------------------------------------
@@ -14,7 +14,7 @@
 
 .exampleOutput {
 	@include clearfix;
-	border: solid 1px $brand-grey-lightest;
+	//border: solid 1px $brand-grey-lightest;
 	padding: $base-spacing-unit;
 	margin-bottom: $base-spacing-unit;
 }
@@ -24,7 +24,7 @@
 // ----------------------------------------
 
 .codeBlock{
-	background-color: $brand-grey-lightest;
+	//background-color: $brand-grey-lightest;
 	padding: $base-spacing-unit;
 	margin-bottom: $base-spacing-unit;
 }

@@ -1,6 +1,9 @@
 @import "compass";
 @import "susy";
 
+// Mix-ins / Functions
+@import "shared/mi-palette";
+
 // Reset / Normalize
 @import "shared/reset";
 
@@ -10,11 +13,11 @@
 
 // Shared including re-useable objects and classes.
 @import "shared/clearfix";
-@import "shared/media";  // Media object
-@import "shared/nav";  // Nav object
 
 // Base styles
+@import "base/main";
 @import "base/typography";
+@import "base/links";
 
 // Components
 @import "components/primary-nav";

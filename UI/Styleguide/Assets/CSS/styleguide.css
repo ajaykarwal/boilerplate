@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* line 3, ../sass/shared/_reset.scss */
+/* line 3, ../SASS/shared/_reset.scss */
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -7,9 +7,18 @@
 }
 
 /**
+ * Remove any padding and margins on our root elements
+ */
+/* line 13, ../SASS/shared/_reset.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/**
  * The usual...
  */
-/* line 13, ../sass/shared/_reset.scss */
+/* line 21, ../SASS/shared/_reset.scss */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 dl, dd, ol, ul,
@@ -23,7 +32,7 @@ hr {
 /**
  * Give a help cursor to elements that give extra info on `:hover`.
  */
-/* line 26, ../sass/shared/_reset.scss */
+/* line 34, ../SASS/shared/_reset.scss */
 abbr[title], dfn[title] {
   cursor: help;
 }
@@ -31,7 +40,7 @@ abbr[title], dfn[title] {
 /**
  * Remove underlines from potentially troublesome elements.
  */
-/* line 33, ../sass/shared/_reset.scss */
+/* line 41, ../SASS/shared/_reset.scss */
 u, ins {
   text-decoration: none;
 }
@@ -39,7 +48,7 @@ u, ins {
 /**
  * Apply faux underline via `border-bottom`.
  */
-/* line 40, ../sass/shared/_reset.scss */
+/* line 48, ../SASS/shared/_reset.scss */
 ins {
   border-bottom: 1px solid;
 }
@@ -47,7 +56,7 @@ ins {
 /**
  * So that `alt` text is visually offset if images donÔÇÖt load.
  */
-/* line 47, ../sass/shared/_reset.scss */
+/* line 55, ../SASS/shared/_reset.scss */
 img {
   font-style: italic;
 }
@@ -55,7 +64,7 @@ img {
 /**
  * Give form elements some cursor interactions...
  */
-/* line 54, ../sass/shared/_reset.scss */
+/* line 62, ../SASS/shared/_reset.scss */
 label,
 input,
 textarea,
@@ -65,7 +74,7 @@ option {
   cursor: pointer;
 }
 
-/* line 62, ../sass/shared/_reset.scss */
+/* line 70, ../SASS/shared/_reset.scss */
 .text-input:active,
 .text-input:focus,
 textarea:active,
@@ -92,7 +101,7 @@ category: Settings
 ```
 
 */
-/* line 16, ../sass/shared/_grid.scss */
+/* line 16, ../SASS/shared/_grid.scss */
 .container {
   max-width: 100%;
   margin-left: auto;
@@ -121,213 +130,16 @@ Extend the clearfix class with Sass to avoid the `.cf` class appearing over and 
 ```
 
 */
-/* line 18, ../sass/shared/_clearfix.scss */
-.cf:after, .media:after, .nav:after {
-  content: "";
-  display: table;
+/* line 18, ../SASS/shared/_clearfix.scss */
+.primary-nav:after, .secondary-nav:after, .styleguide-header:after {
   clear: both;
-}
-
-/*doc
----
-title: Media object
-name: Media object
-category: Shared
----
-
-Place any image- and text-like content side-by-side, as per:
-stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
-   
-
-```html_example
-
-<div class=media>
-   <img src=http://placekitten.com/200/300 alt="" class=media__img>
-   <p class=media__body>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-</div>
-
-```
-
-*/
-/* line 24, ../sass/shared/_media.scss */
-.media {
+  content: '';
   display: block;
 }
 
-/* line 29, ../sass/shared/_media.scss */
-.media__img {
-  float: left;
-  margin-right: 30px;
-}
-
-/* line 35, ../sass/shared/_media.scss */
-.media__img--rev {
-  float: right;
-  margin-left: 30px;
-}
-
-/* line 40, ../sass/shared/_media.scss */
-.media__img img,
-.media__img--rev img {
-  display: block;
-}
-
-/* line 45, ../sass/shared/_media.scss */
-.media__body {
-  overflow: hidden;
-}
-
-/* line 49, ../sass/shared/_media.scss */
-.media__body,
-.media__body > :last-child {
-  margin-bottom: 0;
-}
-
-/*doc
----
-title: Buttons
-name: button
-category: Base CSS
----
-
-Nav abstraction as per: csswizardry.com/2011/09/the-nav-abstraction
-When used on an `ol` or `ul`, this class throws the list into horizontal mode
-
-```html_example
-<ul class=nav>
-  <li><a href=#>Home</a></li>
-  <li><a href=#>About</a></li>
-  <li><a href=#>Portfolio</a></li>
-  <li><a href=#>Contact</a></li>
-</ul>
-```
-
-*/
-/* line 22, ../sass/shared/_nav.scss */
-.nav {
-  list-style: none;
-  margin-left: 0;
-}
-/* line 29, ../sass/shared/_nav.scss */
-.nav > li,
-.nav > li > a {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-}
-/* line 36, ../sass/shared/_nav.scss */
-.nav > li:before {
-  content: "";
-}
-
-/**
- * `.nav--stacked` extends `.nav` and throws the list into vertical mode, e.g.:
- *
-   <ul class="nav  nav--stacked">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
-/* line 57, ../sass/shared/_nav.scss */
-.nav--stacked > li {
-  display: list-item;
-}
-/* line 60, ../sass/shared/_nav.scss */
-.nav--stacked > li > a {
-  display: block;
-}
-
-/**
- * `.nav--banner` extends `.nav` and centres the list, e.g.:
- *
-   <ul class="nav  nav--banner">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
-/* line 78, ../sass/shared/_nav.scss */
-.nav--banner {
-  text-align: center;
-}
-
-/**
- * Give nav links a big, blocky hit area. Extends `.nav`, e.g.:
- *
-   <ul class="nav  nav--block">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- */
-/* line 94, ../sass/shared/_nav.scss */
-.nav--block {
-  line-height: 1;
-  /**
-   * Remove whitespace caused by `inline-block`.
-   */
-  letter-spacing: -0.31em;
-  word-spacing: -0.43em;
-  white-space: nowrap;
-}
-/* line 103, ../sass/shared/_nav.scss */
-.nav--block > li {
-  letter-spacing: normal;
-  word-spacing: normal;
-}
-/* line 107, ../sass/shared/_nav.scss */
-.nav--block > li > a {
-  padding: 15px;
-}
-
-/**
- * Force a nav to occupy 100% of the available width of its parent. Extends
- * `.nav`, e.g.:
- *
-   <ul class="nav nav--fit">
-       <li><a href=#>Home</a></li>
-       <li><a href=#>About</a></li>
-       <li><a href=#>Portfolio</a></li>
-       <li><a href=#>Contact</a></li>
-   </ul>
- *
- * Thanks to @pimpl for this idea!
- */
-/* line 127, ../sass/shared/_nav.scss */
-.nav--fit {
-  display: table;
-  width: 100%;
-}
-/* line 131, ../sass/shared/_nav.scss */
-.nav--fit > li {
-  display: table-cell;
-}
-/* line 134, ../sass/shared/_nav.scss */
-.nav--fit > li > a {
-  display: block;
-}
-
-/**
- * Make a list of keywords. Extends `.nav`, e.g.:
- *
-   `<ul class="nav  nav--keywords>`
- *
- */
-/* line 151, ../sass/shared/_nav.scss */
-.nav--keywords > li:after {
-  content: "\002C" "\00A0";
-}
-/* line 155, ../sass/shared/_nav.scss */
-.nav--keywords > li:last-child:after {
-  display: none;
+/* line 5, ../SASS/base/_main.scss */
+body {
+  background: #f3f3f3;
 }
 
 /*doc
@@ -344,82 +156,143 @@ category: Base CSS
 ```
 
 */
-/* line 16, ../sass/base/_typography.scss */
+/* line 16, ../SASS/base/_typography.scss */
 body {
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #272727;
+  font: 16px/24px "Helvetica Neue", "HelveticaNeue", sans-serif;
 }
 
-/* line 5, ../sass/components/_primary-nav.scss */
-.primary-nav {
-  background-color: #2f2f2f;
-  padding: 15px 30px;
-  margin-bottom: 30px;
+/* line 5, ../SASS/base/_links.scss */
+a {
+  color: #ff6600;
 }
-/* line 11, ../sass/components/_primary-nav.scss */
-.primary-nav a {
+
+/* line 7, ../SASS/components/_primary-nav.scss */
+.primary-nav ul {
+  list-style: none;
+  margin: 0;
+}
+/* line 10, ../SASS/components/_primary-nav.scss */
+.primary-nav ul li {
+  float: left;
+  margin-right: 15px;
+}
+/* line 13, ../SASS/components/_primary-nav.scss */
+.primary-nav ul li a {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
   color: white;
-}
-
-/* line 5, ../sass/components/_secondary-nav.scss */
-.secondary-nav {
-  margin-bottom: 30px;
-}
-/* line 9, ../sass/components/_secondary-nav.scss */
-.secondary-nav li {
-  border-bottom: solid 1px #626262;
-  padding: 15px;
-}
-/* line 14, ../sass/components/_secondary-nav.scss */
-.secondary-nav a {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 100%;
+  padding: 10px;
   text-decoration: none;
+  -moz-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+/* line 22, ../SASS/components/_primary-nav.scss */
+.primary-nav ul li a:hover {
+  background: #cc5200;
 }
 
-/* line 5, ../sass/components/_code-example.scss */
+/* line 5, ../SASS/components/_secondary-nav.scss */
+.secondary-nav {
+  background: white;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 9, ../SASS/components/_secondary-nav.scss */
+.secondary-nav ul {
+  list-style: none;
+  margin: 0;
+}
+/* line 13, ../SASS/components/_secondary-nav.scss */
+.secondary-nav ul li a {
+  border-bottom: 1px solid #f3f3f3;
+  color: #272727;
+  display: block;
+  font-size: 12px;
+  padding: 15px;
+  position: relative;
+  text-decoration: none;
+  -moz-transition: all 0.25s ease-in;
+  -o-transition: all 0.25s ease-in;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+}
+/* line 22, ../SASS/components/_secondary-nav.scss */
+.secondary-nav ul li a:after {
+  background: url("../Images/IconArrow.png") no-repeat;
+  content: '';
+  height: 10px;
+  margin-top: -5px;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  width: 6px;
+}
+/* line 32, ../SASS/components/_secondary-nav.scss */
+.secondary-nav ul li a:hover {
+  background-color: #dadada;
+}
+/* line 36, ../SASS/components/_secondary-nav.scss */
+.secondary-nav ul li:first-child a {
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px 5px 0 0;
+}
+/* line 39, ../SASS/components/_secondary-nav.scss */
+.secondary-nav ul li:last-child a {
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+/* line 5, ../SASS/components/_code-example.scss */
 .codeExample {
   margin-top: 30px;
   margin-bottom: 30px;
-  border-bottom: solid 5px #2f2f2f;
 }
 
-/* line 15, ../sass/components/_code-example.scss */
+/* line 15, ../SASS/components/_code-example.scss */
 .exampleOutput {
   overflow: hidden;
   *zoom: 1;
-  border: solid 1px #e1e1e1;
   padding: 30px;
   margin-bottom: 30px;
 }
 
-/* line 26, ../sass/components/_code-example.scss */
+/* line 26, ../SASS/components/_code-example.scss */
 .codeBlock {
-  background-color: #e1e1e1;
   padding: 30px;
   margin-bottom: 30px;
 }
 
-/* line 32, ../sass/components/_code-example.scss */
+/* line 32, ../SASS/components/_code-example.scss */
 pre, code {
   font-family: "Lucida Console",monospace;
 }
 
-/* line 36, ../sass/components/_code-example.scss */
+/* line 36, ../SASS/components/_code-example.scss */
 pre {
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-/* line 5, ../sass/regions/_layout.scss */
+/* line 5, ../SASS/regions/_layout.scss */
 .col-a {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 25%;
   float: left;
-  padding-left: 2.94118%;
-  padding-right: 2.94118%;
 }
 
-/* line 9, ../sass/regions/_layout.scss */
+/* line 9, ../SASS/regions/_layout.scss */
 .col-b {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -430,9 +303,29 @@ pre {
   padding-right: 2.94118%;
 }
 
-/* line 1, ../sass/regions/_header.scss */
+/* line 5, ../SASS/regions/_header.scss */
 .styleguide-header {
-  padding: 30px 0;
+  background: #ff6600;
+  padding: 15px 0;
+  margin-bottom: 30px;
+}
+/* line 10, ../SASS/regions/_header.scss */
+.styleguide-header h1 {
+  float: left;
+  margin: 0 30px 0 0;
+}
+/* line 14, ../SASS/regions/_header.scss */
+.styleguide-header .primary-nav {
+  float: left;
+  margin-top: 4px;
+}
+
+/* line 5, ../SASS/regions/_footer.scss */
+.styleguide-footer {
+  background: white;
+  font-size: 12px;
+  margin-top: 30px;
+  padding: 15px 0;
 }
 
 /*# sourceMappingURL=styleguide.css.map */

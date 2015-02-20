@@ -2,43 +2,30 @@
 ---
 title: Colour palette
 name: Colour palette
-category: Base
+category: Base CSS
 ---
 
-Button styles can be applied to any element. Typically you'll want to
-use either a `<button>` or an `<a>` element:
-
 ```html_example
+
 <ul class="nav nav--horizontal">
 	<li>
-		<div class="color-block" style="background: rgb(39,39,39);"></div>
-		<p>color: palette(brand, base)</p>
+		<div class="color-block" style="background: rgb(255, 48, 1);"></div>
+		<p>$brand-orange</p>
+	</li>
+
+	<li>
+		<div class="color-block" style="background: rgb(72, 72, 72);"></div>
+		<p>$brand-grey-mid</p>
 	</li>
 
 	<li>
 		<div class="color-block" style="background: rgb(255, 48, 1);"></div>
-		<p>color: palette(brand, accent)</p>
+		<p>$brand-orange</p>
 	</li>
 
+	<li><div class="color-block"></div></li>
+
+	<li><div class="color-block"></div></li>
 </ul>
+
 ```
-
-*/
-
-// -----------------------------------------------------------------------------
-// Color Palette
-// -----------------------------------------------------------------------------
-
-$palettes: (
-	// Set the brand colors
-    brand: (
-        base:   rgb(39,39,39), // CJ Dark grey
-        accent:  rgb(255, 48, 1), //CJ orange
-    ),
-
-    neutral: (
-        base:  rgb(122,122,122),
-        light: lighten($_color-base-grey, 20%),
-        dark: darken($_color-base-grey, 20%)
-    )
-);

@@ -1,43 +1,30 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Creative Jar style guide <%= title %></title>
-    <!-- Project styles -->
-    <link rel="stylesheet" href="../CSS/default.css">
-    <!-- Style guide specific styles -->
-    <link rel="stylesheet" href="Assets/CSS/styleguide.css">
-  </head>
-  <body>
-
-  
-    <div class="container">
-
-    <header class="media styleguide-header">
-      <img src="Assets/Images/creative-jar-logo.png" alt="Creative Jar" class="media__img" />
-      <div class="media__body">
-        <h1>Creative Jar Style Guide</h1>
-      </div>
-    </header>
-
-    <div>
-
-      <nav>
-        <ul class="nav nav--fit primary-nav">
-        <% @categories.each do |category, file_name| %>
-          <li><a href="<%= file_name %>"><%= category %></a></li>
-        <% end %>
-        </ul>
-      </nav>
-      
-      <section class="content">
-
-        <aside class="col-a">
-          <h1></h1>
-          <ul class="nav nav--stacked secondary-nav">
-          <% @blocks.each do |b| %>
-            <li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
-          <% end %>
-          </ul>
-        </aside>
-
-        <div class="col-b">
+<!DOCTYPE html>
+<html lang="en-gb">
+	<head>
+		<meta charset="utf-8" />
+		<title>{{Client}} &bull; Living Style Guide <%= title %></title>
+		<link rel="stylesheet" href="../CSS/default.css">
+		<link rel="stylesheet" href="Assets/CSS/styleguide.css">
+	</head>
+	<body>
+		<header class="styleguide-header">
+			<div class="container">
+				<h1><img src="http://fpoimg.com/100x40?text=Logo" alt="{{Client}} logo" /></h1>
+				<nav class="primary-nav">
+					<ul>
+						<% @categories.each do |category, file_name| %>
+							<li><a href="<%= file_name %>"><%= category %></a></li>
+						<% end %>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<section class="styleguide-content container">
+			<nav class="col-a secondary-nav">
+				<ul>
+					<% @blocks.each do |b| %>
+						<li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
+					<% end %>
+				</ul>
+			</nav>
+			<div class="col-b">

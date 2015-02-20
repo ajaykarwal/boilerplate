@@ -3,7 +3,7 @@
 // ----------------------------------------
 
 .col-a{
-    @include span(3 of 12);
+    @include span(3 of 12 no-gutters);
 }
 
 .col-b {
