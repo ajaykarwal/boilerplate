@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>{{Client}} &bull; Living Style Guide <%= title %></title>
-		<link rel="stylesheet" href="../CSS/default.css">
-		<link rel="stylesheet" href="Assets/CSS/styleguide.css">
+		<link rel="stylesheet" href="../CSS/Default.css">
+		<link rel="stylesheet" href="Assets/CSS/Styleguide.css">
 	</head>
 	<body>
-		<header class="styleguide-header">
-			<div class="container">
+		<header class="sg-header">
+			<div class="sg-container">
 				<h1><img src="http://fpoimg.com/100x40?text=Logo" alt="{{Client}} logo" /></h1>
-				<nav class="primary-nav">
+				<nav class="sg-primary-nav">
 					<ul>
 						<% @categories.each do |category, file_name| %>
 							<li><a href="<%= file_name %>"><%= category %></a></li>
@@ -19,12 +19,13 @@
 				</nav>
 			</div>
 		</header>
-		<section class="styleguide-content container">
-			<nav class="col-a secondary-nav">
+		<section class="sg-content sg-container">
+			<nav class="l-sg-col-a sg-secondary-nav">
 				<ul>
 					<% @blocks.each do |b| %>
 						<li><a href="#<%= b[:name] %>"><%= b[:title] %></a></li>
 					<% end %>
 				</ul>
 			</nav>
-			<div class="col-b">
+			<div class="l-sg-col-b">
+				<div class="sg-module">

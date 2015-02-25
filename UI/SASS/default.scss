@@ -1,39 +1,22 @@
 @import "compass";
-
-// Reset
-@import "shared/cj-reset";
+@import "susy";
 
 // Settings
-@import "shared/settings";
+@import "Shared/Settings";
+@import "Shared/Grid";
+@import "Shared/ColourPalette";
 
-// Mixins
-@import "shared/mi-icons";
-@import "shared/mi-palette";
+// Reset / Normalize
+@import "Shared/Reset";
 
 // Shared including re-useable objects and classes.
-@import "shared/clearfix";
-@import "shared/media";  // Media object
-@import "shared/nav";  // Nav object
+@import "Shared/Clearfix";
+@import "Shared/MIPalette";
 
 // Base styles
-@import "base/colour-palette"; // Leave this first as the colour palette function is included.
-@import "base/main";
-@import "base/code";
-@import "base/forms";
-@import "base/images";
-@import "base/lists";
-//@import "base/paragraphs";
-@import "base/quotes";
-//@import "base/smallprint";
-@import "base/tables";
-@import "base/typography";
+@import "Base/Main";
+@import "Base/Links";
+@import "Base/Paragraphs";
 
 // Components
-@import "components/cta";
-@import "components/pagination";
-
-// Regions
-@import "regions/header";
-@import "regions/footer";
-
-// Vendor
+@import "Shared/ColourPalette.scss";
