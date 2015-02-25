@@ -1,0 +1,24 @@
+/*
+
+Settings
+========
+
+*/
+
+// Base Typography
+$font-size-base:    						15px;
+$line-height-base:  						25px;
+
+$font-size-small:							12px;
+$font-size-tiny:							10px;
+
+// Font Stacks
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+$font-family-base: 							'Montserrat', sans-serif;;
+$font-family-brand: 						$font-family-base;
+
+// Default Spacing
+$spacing-unit-base: 						15px;
+$spacing-unit-large:						$spacing-unit-base*2;

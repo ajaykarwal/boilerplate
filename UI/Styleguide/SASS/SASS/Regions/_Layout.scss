@@ -1,0 +1,11 @@
+// ----------------------------------------
+// Styleguide Layout
+// ----------------------------------------
+
+.l-sg-col-a {
+    @include 								span(3 of 12);
+}
+
+.l-sg-col-b {
+    @include 								span(9 of 12 no-gutters);
+}

@@ -1,0 +1,172 @@
+/*
+
+Settings
+========
+
+*/
+/* line 14, ../SASS/Shared/_Grid.scss */
+.sg-container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1194px;
+}
+/* line 12, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.sg-container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/*
+---
+title: Creative Jar Reset
+---
+
+A customised reset & normalise.
+
+*/
+/* line 11, ../SASS/Shared/_Reset.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 18, ../SASS/Shared/_Reset.scss */
+html, body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 29, ../SASS/Shared/_Reset.scss */
+article, aside, details,
+figcaption, figure, footer,
+header, hgroup, main, menu, nav,
+section, summary {
+  display: block;
+}
+
+/* line 36, ../SASS/Shared/_Reset.scss */
+audio, canvas,
+progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+/* line 42, ../SASS/Shared/_Reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 47, ../SASS/Shared/_Reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 52, ../SASS/Shared/_Reset.scss */
+td, th {
+  padding: 0;
+}
+
+/* line 56, ../SASS/Shared/_Reset.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 60, ../SASS/Shared/_Reset.scss */
+u, ins {
+  text-decoration: none;
+}
+
+/* line 64, ../SASS/Shared/_Reset.scss */
+small {
+  font-size: 10px;
+}
+
+/* line 68, ../SASS/Shared/_Reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 76, ../SASS/Shared/_Reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 80, ../SASS/Shared/_Reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 84, ../SASS/Shared/_Reset.scss */
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+/* line 89, ../SASS/Shared/_Reset.scss */
+ins {
+  border-bottom: 1px solid;
+}
+
+/* line 93, ../SASS/Shared/_Reset.scss */
+img {
+  font-style: italic;
+}
+
+/* line 97, ../SASS/Shared/_Reset.scss */
+label, input, textarea,
+button, select, option {
+  cursor: pointer;
+}
+
+/* line 102, ../SASS/Shared/_Reset.scss */
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none;
+}
+
+/*doc
+---
+title: Clearfix
+name: Clearfix
+category: Generic
+---
+
+```html_example
+
+```
+
+*/
+/* line 5, ../SASS/Base/_Main.scss */
+body {
+  font: 15px/25px "Arial", sans-serif;
+}
+
+/* line 5, ../SASS/Base/_Links.scss */
+a {
+  color: #ff4600;
+}
+
+/* line 5, ../SASS/Base/_Paragraphs.scss */
+p {
+  margin: 15px 0;
+}
+
+/*# sourceMappingURL=Default.css.map */

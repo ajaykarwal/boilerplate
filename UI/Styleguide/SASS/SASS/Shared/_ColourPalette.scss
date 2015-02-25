@@ -1,0 +1,18 @@
+$color-neutral-grey: 						rgb(39, 39, 39);
+$color-brand-accent: 						rgb(255, 70, 0);
+
+$palettes: (
+	neutral: (
+		base: 								rgb(255, 255, 255), 
+		dark: 								rgb(0, 0, 0)
+	), 
+	neutral-grey: (
+		base: 								$color-neutral-grey, 
+		mid-light:							lighten($color-neutral-grey, 70%), 						
+		light: 								lighten($color-neutral-grey, 80%)
+	), 
+	brand-accent: (
+		base: 								$color-brand-accent, 
+		dark:								darken($color-brand-accent, 10%)
+	)
+);

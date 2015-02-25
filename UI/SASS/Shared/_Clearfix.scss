@@ -1,0 +1,20 @@
+/*doc
+---
+title: Clearfix
+name: Clearfix
+category: Generic
+---
+
+```html_example
+
+```
+
+*/
+
+%clearfix {
+	&:after {
+		clear: 								both;
+		content:							'';
+		display: 							block;
+	}
+}

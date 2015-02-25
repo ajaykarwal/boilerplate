@@ -1,0 +1,108 @@
+/*
+---
+title: Creative Jar Reset
+---
+
+A customised reset & normalise.
+
+*/
+
+* {
+    &,
+    &:before,
+    &:after {
+        @include 							box-sizing(border-box);
+    }
+}
+
+html, body,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+    margin:									0;
+    padding:								0;
+}
+
+article, aside, details,
+figcaption, figure, footer, 
+header, hgroup, main, menu, nav,
+section, summary {
+  display: 									block;
+}
+
+audio, canvas,
+progress, video {
+  display: 									inline-block;
+  vertical-align: 							baseline;
+}
+
+audio:not([controls]) {
+  display: 									none;
+  height: 									0;
+}
+
+table {
+    border-collapse: 						collapse;
+    border-spacing: 						0;
+}
+
+td, th {
+  padding: 									0;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+u, ins {
+    text-decoration:						none;
+}
+
+small {
+  font-size: 								$font-size-tiny;
+}
+
+sub,
+sup {
+  font-size: 								75%;
+  line-height: 								0;
+  position: 								relative;
+  vertical-align: 							baseline;
+}
+
+sup {
+	top: 									-0.5em;
+}
+
+sub {
+	bottom: 								-0.25em;
+}
+
+abbr[title],
+dfn[title] {
+    cursor:									help;
+}
+
+ins {
+    border-bottom:							1px solid;
+}
+
+img {
+    font-style:								italic;
+}
+
+label, input, textarea,
+button, select, option {
+    cursor:									pointer;
+}
+
+input:active,
+input:focus,
+textarea:active,
+textarea:focus {
+    cursor:									text;
+    outline:								none;
+}
