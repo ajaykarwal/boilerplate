@@ -20,7 +20,8 @@
 				text-decoration: 			none;
 				text-transform: 			uppercase;
 				@include					transition(all .25s ease-in);
-				&:hover {
+				&:hover, 
+				&.is-active {
 					background:				palette(brand-accent, dark);
 				}
 			}

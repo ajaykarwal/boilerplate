@@ -9,7 +9,9 @@
 	margin-bottom: 							$spacing-unit-large;
 	h1 {
 		float:								left;
+		line-height: 						normal;
 		margin:								0 $spacing-unit-large 0 0;
+		font-size: 							0;
 	}
 	.sg-primary-nav {
 		float:								left;

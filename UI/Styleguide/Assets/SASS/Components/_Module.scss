@@ -7,6 +7,12 @@
 	@include								border-radius(5px);
 	margin-bottom: 							$spacing-unit-large;
 	padding:								gutter(9);
+	> h1 {
+		font-size: 							24px;
+		line-height: 						normal;
+		text-align: 						left;
+		text-transform: 					none;
+	}
 	.example-output {
 		@extend								%clearfix;
 		margin:								$spacing-unit-large 0;

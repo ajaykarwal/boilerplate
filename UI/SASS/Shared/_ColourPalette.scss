@@ -1,3 +1,28 @@
+/*doc
+---
+title: Colour Palette
+name: colour-palette
+category: brand
+---
+
+```html_example_hidden
+	<ul class="colour-palette">
+	    <li style="background: rgb(255, 255, 255);">
+	        <p>neutral: base</p>
+	    </li>
+	    <li style="background: rgb(0, 0, 0);">
+	        <p>neutral: dark</p>
+	    </li>
+	    <li style="background: rgb(53, 53, 53);">
+	        <p>neutral-grey: base</p>
+	    </li>
+	    <li style="background: rgb(255, 70, 0);">
+	        <p>brand-accent: base</p>
+	    </li>
+	</ul>
+```
+*/
+
 $color-neutral-grey: 						rgb(39, 39, 39);
 $color-brand-accent: 						rgb(255, 70, 0);
 
