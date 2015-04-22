@@ -6,6 +6,9 @@
 @import "Shared/Grid";
 @import "Shared/ColourPalette";
 
+// Reset / Normalize
+@import "Shared/Reset";
+
 // Shared including re-useable objects and classes.
 @import "Shared/Clearfix";
 @import "Shared/MIPalette";
@@ -22,7 +25,6 @@
 @import "Components/Module";
 @import "Components/CodePreview";
 @import "Components/ColourPalette";
-@import "Components/Icons";
 
 // Regions
 @import "Regions/Layout";
@@ -30,4 +32,4 @@
 @import "Regions/Footer";
 
 // Vendor
-@import	"Vendor/monokai_sublime";
+@import	"Vendor/monokai_sublime"

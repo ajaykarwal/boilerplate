@@ -14,7 +14,7 @@
 				border-bottom: 				1px solid palette(neutral-grey, light);
 				color:						palette(neutral-grey);
 				display: 					block;
-				padding:					gutter(3);
+				padding:					gutter(3) gutter(1) gutter(3) gutter(3);
 				position: 					relative;
 				text-decoration: 			none;
 				@include					transition(all .25s ease-in);

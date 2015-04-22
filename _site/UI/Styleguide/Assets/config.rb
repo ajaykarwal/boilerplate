@@ -8,9 +8,6 @@ require 'susy'
 # Breakpoint if being used
 # require 'breakpoint'
 
-# Ceaser if being used
-# require 'ceaser-easing'
-
 # Set this to the root of your project when deployed:
 http_path = "/"
 css_dir = "CSS"
@@ -21,7 +18,6 @@ sourcemap = "true"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
-output_style = :compressed
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 # relative_assets = true
@@ -35,12 +31,3 @@ output_style = :compressed
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
-
-require "fileutils"
-
-on_stylesheet_saved do |file|
-  if File.exists?(file)
-    filename = File.basename(file, File.extname(file))
-    File.rename(file, css_dir + "/" + filename + ".min" + File.extname(file))
-  end
-end

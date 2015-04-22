@@ -11,7 +11,6 @@ $susy: (
 // ----------------------------------------
 // Set grid ontainer
 // ----------------------------------------
-.sg-container {
-    @include 								container;
-    max-width: 								1194px;
+.l-container {
+    @include 								container(1000px);
 }
