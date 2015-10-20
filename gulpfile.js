@@ -1,17 +1,19 @@
+/// <binding ProjectOpened='default' />
+/// <vs AfterBuild='default' />
 var gulp = require('gulp'),
-	imagemin = require('gulp-imagemin'),
-	pngquant = require('imagemin-pngquant'),
-	rev = require('gulp-rev-append'),
-    compass = require('gulp-compass'),
-    minifyCSS = require('gulp-minify-css'),
+    bless = require('gulp-bless');
+    compass = require('gulp-for-compass');
+    imagemin = require('gulp-imagemin'),
+    livereload = require('gulp-livereload'),
+    pngquant = require('imagemin-pngquant'),
 
-	// Base Paths
-	basePaths = {
-		images: 'UI/Images/',
-		css: 'UI/CSS/',
-        sass: 'UI/SASS/',
-		dest: ''
-	};
+    // Base Paths
+    basePaths = {
+        images: 'UI/Images/',
+        css: 'UI/CSS/',
+        sass: 'UI/Sass/',
+        distCSS: 'UI/Dist/CSS'
+    };
 
 gulp.task('imageOptim', function () {
     return gulp.src(basePaths.images + '*')
@@ -23,31 +25,27 @@ gulp.task('imageOptim', function () {
         .pipe(gulp.dest(basePaths.images));
 });
 
-gulp.task('rev', function() {
-    gulp.src('./index.html')
-        .pipe(rev())
-        .pipe(gulp.dest('./'));
-});
-
-gulp.task('compass', function() {
+gulp.task('compass', function () {
     gulp.src(basePaths.sass + '*.scss')
     .pipe(compass({
-        css: basePaths.css,
-        sass: basePaths.sass,
-        image: basePaths.images,
-        require: ['susy', 'breakpoint', 'ceaser-easing']
-    }))
-    .on('error', function(error) {
-        // Would like to catch the error here 
-        console.log(error);
-        this.emit('end');
-    })
-    .pipe(minifyCSS())
-    .pipe(gulp.dest(basePaths.css));
+        cssDir: basePaths.css,
+        sassDir: basePaths.sass,
+        force: true,
+        noLineComments: true,
+        outputStyle: 'compressed'
+    }));
+})
+
+gulp.task('css', function () {
+    gulp.src(basePaths.css + '*.css')
+    .pipe(bless())
+    .pipe(gulp.dest(basePaths.distCSS))
+    .pipe(livereload());
 });
 
-gulp.task('default', function() {
+gulp.task('default', function () {
+    livereload.listen();
     gulp.watch(basePaths.sass + '**/*.scss', ['compass']);
-    gulp.watch(basePaths.images + '*', ['imageOptim']);
-    gulp.watch(basePaths.css + '*.css', ['rev']);
+    gulp.watch(basePaths.css + '**/*.css', ['css']);
+    //gulp.watch(basePaths.images + '*', ['imageOptim']);
 });
