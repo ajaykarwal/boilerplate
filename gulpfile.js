@@ -1,16 +1,21 @@
+/// <binding ProjectOpened='default' />
+/// <vs AfterBuild='default' />
 var gulp = require('gulp'),
+	bless = require('gulp-bless'), 
+    compass = require('gulp-for-compass'), 
 	imagemin = require('gulp-imagemin'),
 	pngquant = require('imagemin-pngquant'),
 	rev = require('gulp-rev-append'),
-    compass = require('gulp-compass'),
     minifyCSS = require('gulp-minify-css'),
     scsslint = require('gulp-scss-lint'), 
+    livereload = require('gulp-livereload'),
 
 	// Base Paths
 	paths = {
 		src: {
 			images: 'UI/SRC/Images/',
-	        sass: 'UI/SRC/Sass/'
+	        sass: 'UI/SRC/Sass/',
+	        css: 'UI/SRC/CSS/'
 		}, 
 		dist: {
 			images: 'UI/Dist/Images/',
@@ -34,30 +39,34 @@ gulp.task('rev', function() {
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('compass', function() {
+gulp.task('compass', function () {
     gulp.src(paths.src.sass + '*.scss')
     .pipe(compass({
-        css: paths.dist.css,
-        sass: paths.src.sass,
-        image: paths.dist.images,
-        require: ['susy', 'breakpoint', 'ceaser-easing']
-    }))
-    .on('error', function(error) {
-        // Would like to catch the error here 
-        console.log(error);
-        this.emit('end');
-    })
-    .pipe(minifyCSS())
-    .pipe(gulp.dest(paths.dist.css));
-});
+        cssDir: paths.src.css,
+        sassDir: paths.src.sass,
+        force: true,
+        noLineComments: true,
+        outputStyle: 'compressed', 
+        sourcemap: true
+    }));
+})
 
 gulp.task('scss-lint', function() {
   	return gulp.src(paths.src.sass + '**/*.scss')
     .pipe(scsslint());
 });
 
+gulp.task('css', function () {
+    gulp.src(paths.src.css + '*.css')
+    .pipe(bless())
+    .pipe(gulp.dest(paths.dist.css))
+    .pipe(livereload());
+});
+
 gulp.task('default', function() {
+    livereload.listen();
     gulp.watch(paths.src.sass + '**/*.scss', ['scss-lint', 'compass']);
-    gulp.watch(paths.dist.images + '*', ['imageOptim']);
+    gulp.watch(paths.src.css + '**/*.css', ['css']);
+    gulp.watch(paths.src.images + '*', ['imageOptim']);
     gulp.watch(paths.dist.css + '*.css', ['rev']);
 });
