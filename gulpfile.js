@@ -10,17 +10,20 @@ var gulp = require('gulp'),
     scsslint = require('gulp-scss-lint'), 
     livereload = require('gulp-livereload'),
     sitespeedio = require('gulp-sitespeedio'), 
-    pa11y = require('gulp-pa11y'), 
+    pa11y = require('gulp-pa11y'),
+    concat = require('gulp-concat'), 
 	paths = {
 		reports: 'Reports/', 
 		src: {
 			images: 'UI/SRC/Images/',
 	        sass: 'UI/SRC/Sass/',
-	        css: 'UI/SRC/CSS/'
+	        css: 'UI/SRC/CSS/',
+            js: 'UI/SRC/JavaScript/'
 		}, 
 		dist: {
 			images: 'UI/Dist/Images/',
-			css: 'UI/Dist/CSS/'		
+			css: 'UI/Dist/CSS/',
+            js: 'UI/Dist/JavaScript/'	
 		}
 	}, 
 	baseUrl = 'localhost:8888'
@@ -75,6 +78,12 @@ gulp.task('speed-test', sitespeedio({
 	html: true
 }));
 
+gulp.task('scripts', function() {
+    return gulp.src(paths.src.js)
+    .pipe(concat('Scripts.js'))
+    .pipe( gulp.dest(paths.dist.js));
+});
+
 gulp.task('accessibility-test', pa11y({
 	url: baseUrl
 }));
@@ -87,4 +96,5 @@ gulp.task('default', function() {
     gulp.watch(paths.src.css + '**/*.css', ['css']);
     gulp.watch(paths.src.images + '*', ['imageOptim']);
     gulp.watch(paths.dist.css + '*.css', ['rev']);
+    gulp.watch(paths.src.js, ['scripts']);
 });
