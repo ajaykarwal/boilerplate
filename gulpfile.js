@@ -25,7 +25,7 @@ var gulp = require('gulp'),
             js: 'UI/Dist/JavaScript/'	
 		}
 	}, 
-	baseUrl = 'localhost:8888'
+	baseUrl = 'localhost:8888', 
 	templates = [
 		baseUrl + '/index.html'
 	];
