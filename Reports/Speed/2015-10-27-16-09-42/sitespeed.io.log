@@ -1,0 +1,14 @@
+2015-10-27T16:09:44.233Z - info: [sitespeed] OS: 'darwin 15.0.0', Node.js: 'v0.12.1', sitespeed.io: '3.5.0', PhantomJS: '1.9.8', java: '1.6.0_65', browsertime: '0.9.4'
+2015-10-27T16:09:44.266Z - info: [sitespeed] Will analyze 1 pages
+2015-10-27T16:09:44.270Z - info: [sitespeed] Running YSlow for localhost:8888/index.html [phantomjs]
+2015-10-27T16:09:46.362Z - info: [sitespeed] Done analyzing urls
+2015-10-27T16:09:46.538Z - info: [sitespeed] Wrote file assets.html
+2015-10-27T16:09:46.538Z - info: [sitespeed] Wrote file errors.html
+2015-10-27T16:09:46.539Z - info: [sitespeed] Wrote file hotlist.html
+2015-10-27T16:09:46.539Z - info: [sitespeed] Wrote file pages.html
+2015-10-27T16:09:46.539Z - info: [sitespeed] Wrote file 8888-index.html.html
+2015-10-27T16:09:46.539Z - info: [sitespeed] Wrote file rules.html
+2015-10-27T16:09:46.540Z - info: [sitespeed] Wrote file detailed-site-summary.html
+2015-10-27T16:09:46.540Z - info: [sitespeed] Wrote file index.html
+2015-10-27T16:09:46.552Z - info: [sitespeed] Wrote results to /Users/benmacgowan/Sites/Git/boilerplate/Reports/Speed/2015-10-27-16-09-42
+2015-10-27T16:09:46.557Z - info: [sitespeed] The analyze took a few seconds (2 seconds)

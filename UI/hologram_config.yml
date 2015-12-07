@@ -2,16 +2,16 @@
 # All paths should be relative to there
 
 # The directory containing the source files to parse recursively
-source: ./SASS
+source: ./SRC/SASS
 
 # The directory that hologram will build to
-destination: ./Styleguide
+destination: ./Dist/Styleguide
 
 # The assets needed to build the docs (includes header.html,
 # footer.html, etc)
 # You may put doc related assets here too: images, css, etc.
-documentation_assets: ./Styleguide/Assets
-custom_markdown: ./Styleguide/Assets/_CJMarkdownRenderer.rb
+documentation_assets: ./Dist/Styleguide/Assets
+custom_markdown: ./Dist/Styleguide/Assets/_CJMarkdownRenderer.rb
 
 # Mark which category should be the index page
 # Alternatively, you may have an index.md in the documentation assets
