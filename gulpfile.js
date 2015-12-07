@@ -10,7 +10,6 @@ var gulp = require('gulp'),
     scsslint = require('gulp-scss-lint'), 
     livereload = require('gulp-livereload'),
     sitespeedio = require('gulp-sitespeedio'), 
-    pa11y = require('gulp-pa11y'),
     concat = require('gulp-concat'), 
 	paths = {
 		reports: 'Reports/', 
@@ -55,13 +54,9 @@ gulp.task('compass', function () {
         force: true,
         noLineComments: true,
         outputStyle: 'compressed', 
-        sourcemap: true
+        sourcemap: true, 
+        require: ['susy', 'breakpoint']
     }));
-})
-
-gulp.task('scss-lint', function() {
-  	return gulp.src(paths.src.sass + '**/*.scss')
-    .pipe(scsslint());
 });
 
 gulp.task('css', function () {
@@ -71,12 +66,10 @@ gulp.task('css', function () {
     .pipe(livereload());
 });
 
-gulp.task('speed-test', sitespeedio({
-	urls: templates, 
-	resultBaseDir: paths.reports + 'Speed/', 
-	suppressDomainFolder: true, 
-	html: true
-}));
+gulp.task('scss-lint', function() {
+  	return gulp.src(paths.src.sass + '**/*.scss')
+    .pipe(scsslint());
+});
 
 gulp.task('scripts', function() {
     return gulp.src(paths.src.js)
@@ -84,11 +77,12 @@ gulp.task('scripts', function() {
     .pipe( gulp.dest(paths.dist.js));
 });
 
-gulp.task('accessibility-test', pa11y({
-	url: baseUrl
+gulp.task('speed-test', sitespeedio({
+	urls: templates, 
+	resultBaseDir: paths.reports + 'Speed/', 
+	suppressDomainFolder: true, 
+	html: true
 }));
-
-gulp.task('test', ['speed-test', 'accessibility-test']);
 
 gulp.task('default', function() {
     livereload.listen();
