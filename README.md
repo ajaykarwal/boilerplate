@@ -20,8 +20,9 @@ To get started with this boilerplate, choose one of the following options:
 
 ## Things to remember
 When getting started with your Boilerplate, it is important to remember the following things:
+- [ ] Install any necessary gem files using bundler (`bundler install`)
+- [ ] Install any necessary node modules using npm (`npm install`)
 - [ ] Update your page `<title>` appropriately
 - [ ] Update the colour palette and logo of your styleguide to match the client's branding 
 - [ ] If your project requires JavaScript, uncomment the default `RequireJS` code in `Global.js` to get started
 - [ ] Make sure that the `jQuery` version included in the release is the latest available
-- [ ] Update `config.rb` with your required resources ([`susy`](http://susydocs.oddbird.net/en/latest/), [`breakpoint`](http://breakpoint-sass.com/), [`ceaser-easing`](https://github.com/jhardy/compass-ceaser-easing))
