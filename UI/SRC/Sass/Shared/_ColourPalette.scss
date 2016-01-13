@@ -5,39 +5,19 @@ name: colour-palette
 category: brand
 ---
 
+Colours are named using [Name that Color](http://chir.ag/projects/name-that-color/) where results make appropriate sense.
+
 ```html_example_hidden
 	<ul class="colour-palette">
 	    <li style="background: rgb(255, 255, 255);">
-	        <p>neutral: base</p>
+	        <p>$white</p>
 	    </li>
 	    <li style="background: rgb(0, 0, 0);">
-	        <p>neutral: dark</p>
-	    </li>
-	    <li style="background: rgb(53, 53, 53);">
-	        <p>neutral-grey: base</p>
-	    </li>
-	    <li style="background: rgb(255, 70, 0);">
-	        <p>brand-accent: base</p>
+	        <p>$black</p>
 	    </li>
 	</ul>
 ```
 */
 
-$color-neutral-grey: 						rgb(39, 39, 39);
-$color-brand-accent: 						rgb(255, 70, 0);
-
-$palettes: (
-	neutral: (
-		base: 								rgb(255, 255, 255), 
-		dark: 								rgb(0, 0, 0)
-	), 
-	neutral-grey: (
-		base: 								$color-neutral-grey, 
-		mid-light:							lighten($color-neutral-grey, 70%), 						
-		light: 								lighten($color-neutral-grey, 80%)
-	), 
-	brand-accent: (
-		base: 								$color-brand-accent, 
-		dark:								darken($color-brand-accent, 10%)
-	)
-);
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);

@@ -1,0 +1,9 @@
+// ----------------------------------------
+// Main
+// ----------------------------------------
+
+body {
+	background:								palette(neutral-grey, light);
+	color:									palette(neutral-grey);
+	font:									#{$font-size-base}/#{$line-height-base} $font-family-base;
+}

@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     livereload = require('gulp-livereload'),
     sitespeedio = require('gulp-sitespeedio'), 
     concat = require('gulp-concat'), 
+    hologram = require('gulp-hologram'), 
 	paths = {
 		reports: 'Reports/', 
 		src: {
@@ -67,13 +68,13 @@ gulp.task('css', function () {
 });
 
 gulp.task('scss-lint', function() {
-  	return gulp.src(paths.src.sass + '**/*.scss')
+    return gulp.src([paths.src.sass + '**/*.scss', '!' + paths.src.sass + 'Vendor/*.scss'])
     .pipe(scsslint());
 });
 
 gulp.task('scripts', function() {
     return gulp.src(paths.src.js)
-    .pipe(concat('Scripts.js'))
+    .pipe(concat('Scripts.min.js'))
     .pipe( gulp.dest(paths.dist.js));
 });
 
@@ -84,11 +85,16 @@ gulp.task('speed-test', sitespeedio({
 	html: true
 }));
 
+gulp.task('hologram', function() {
+	gulp.src('./UI/hologram_config.yml')
+		.pipe(hologram());
+});
+
 gulp.task('default', function() {
     livereload.listen();
-    gulp.watch(paths.src.sass + '**/*.scss', ['scss-lint', 'compass']);
+    gulp.watch(paths.src.sass + '**/*.scss', ['scss-lint', 'compass', 'hologram']);
     gulp.watch(paths.src.css + '**/*.css', ['css']);
     gulp.watch(paths.src.images + '*', ['imageOptim']);
     gulp.watch(paths.dist.css + '*.css', ['rev']);
-    gulp.watch(paths.src.js, ['scripts']);
+    gulp.watch(paths.src.js + '**/*.js', ['scripts']);
 });

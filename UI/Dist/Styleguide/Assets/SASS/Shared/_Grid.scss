@@ -3,15 +3,15 @@
 // ----------------------------------------
 
 $susy: (
-	columns: 								12,
-	math: 									fluid,
-	output: 								float
+	columns: 12,
+	math: fluid,
+	output: float
 );
 
 // ----------------------------------------
 // Set grid ontainer
 // ----------------------------------------
 .sg-container {
-    @include 								container;
-    max-width: 								1194px;
+    @include container;
+    max-width: 1194px;
 }

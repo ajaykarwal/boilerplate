@@ -3,14 +3,14 @@
 // ----------------------------------------
 
 $susy: (
-	columns: 								12,
-	math: 									fluid,
-	output: 								float
+	columns: 12,
+	math: fluid,
+	output: float
 );
 
 // ----------------------------------------
 // Set grid ontainer
 // ----------------------------------------
 .l-container {
-    @include 								container(1000px);
+	@include container(1000px);
 }
