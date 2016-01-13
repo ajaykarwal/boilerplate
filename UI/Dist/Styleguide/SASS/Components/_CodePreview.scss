@@ -3,10 +3,10 @@
 // ----------------------------------------
 
 .code-preview {
-	margin:									0 gutter(9)*-1;
+	margin: 0 gutter(9)*-1;
 	&:last-child {
-		@include							border-radius(0 0 5px 5px);
-		margin-bottom: 						gutter(9)*-1;
-		overflow: 							hidden;
+		@include border-radius(0 0 5px 5px);
+		margin-bottom: gutter(9)*-1;
+		overflow: hidden;
 	}
 }
