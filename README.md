@@ -15,7 +15,7 @@ All technologies and files included in this project is authored to adhere to the
 ## Quick start
 To get started with this boilerplate, choose one of the following options:
 
-1. Download the [latest stable release](https://github.com/creativejar/boilerplate/releases/tag/v1.1.0).
+1. Download the [latest stable release](https://github.com/creativejar/boilerplate/releases/tag/2.0.0).
 2. Clone the git repo — `git clone https://github.com/creativejar/boilerplate.git`
 
 ## Things to remember
